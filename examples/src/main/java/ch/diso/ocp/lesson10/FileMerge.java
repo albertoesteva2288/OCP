@@ -17,6 +17,11 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Dieses Beispiel wird in einem aktuellen Projekt verwendet. Etliche (10_000+)
+ * Word (.docx) Dateien müssen in EINER Datei zusammengefasst und als Einheit
+ * weiterverarbeitet werden können.
+ */
 public class FileMerge extends DirectoryWalker {
 
     private static final Logger LOGGER = Logger.getLogger(FileMerge.class.getName());
@@ -163,8 +168,7 @@ public class FileMerge extends DirectoryWalker {
     public static void main(String[] args) throws Exception {
 
         new FileMerge(
-                new File("/Users/daniel/Downloads/documents1"),
-                // new File("testDocuments"),
+                new File("testDocuments"),
                 new File("/tmp/out.docx"));
     }
 
