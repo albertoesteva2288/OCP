@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.diso</groupId>
-    <artifactId>examples</artifactId>
+    <artifactId>exercises</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <build>
@@ -20,21 +20,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>r05</version>
-        </dependency>
-
-    </dependencies>
 
 </project>
