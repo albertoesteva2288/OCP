@@ -27,11 +27,15 @@ public class EmployeeTest {
     }
 
     public static void printEmployee(Employee emp) {
-        System.out.println();
+         System.out.println(); // Print a blank line as a separator
+         // Print out the data in this Employee object
+         System.out.println("Employee type:   " + emp.getClass().getSimpleName());
+         System.out.println(emp);
+     }
 
-        System.out.println("Employee id:         " + emp.getEmpId());
-        System.out.println("Employee name:       " + emp.getName());
-        System.out.println("Employee Soc Sec #:  " + emp.getSsn());
-        System.out.println("Employee salary:     " + NumberFormat.getCurrencyInstance().format((double) emp.getSalary()));
-    }
+     public static void printEmployee(Employee emp, EmployeeStockPlan esp) {
+         printEmployee (emp);
+         System.out.println("Stock Options:   " + esp.grantStock(emp));
+     }
+
 }

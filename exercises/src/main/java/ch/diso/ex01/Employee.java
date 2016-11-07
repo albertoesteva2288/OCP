@@ -1,5 +1,7 @@
 package ch.diso.ex01;
 
+import java.text.NumberFormat;
+
 public class Employee {
 
     private int empId;
@@ -41,5 +43,15 @@ public class Employee {
             salary += increase;
 
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", name='" + name + '\'' +
+                ", ssn='" + ssn + '\'' +
+                ", salary=" + NumberFormat.getCurrencyInstance().format(getSalary()) +
+                '}';
     }
 }
