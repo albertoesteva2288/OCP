@@ -1,8 +1,10 @@
 package ch.diso.ex23;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toSet;
 
 /**
  * Domain object representing a collection of books
@@ -16,9 +18,9 @@ public class Books {
      * @return list of book titles
      */
     public static List<String> titlesOf(List<Book> books) {
-        // [your code here]
-
-        return Collections.emptyList();
+        return books.stream()
+                .map(Book::getTitle)
+                .collect(toList());
     }
 
     /**
@@ -28,9 +30,10 @@ public class Books {
      * @return list of author full names
      */
     public static List<String> namesOfAuthorsOf(List<Book> books) {
-        // [your code here]
-
-        return Collections.emptyList();
+        return books.stream()
+                .map(Book::getAuthor)
+                .map(Author::fullName)
+                .collect(toList());
     }
 
     /**
@@ -40,8 +43,8 @@ public class Books {
      * @return set of publishers
      */
     public static Set<Publisher> publishersRepresentedBy(List<Book> books) {
-        // [your code here]
-
-        return Collections.emptySet();
+        return books.stream()
+                .map(Book::getPublisher)
+                .collect(toSet());
     }
 }
