@@ -21,18 +21,18 @@ public class ProductCounter {
         productNames.put("Blue Polo Shirt", "1S01");
         productNames.put("Black Polo Shirt", "1S02");
         productNames.put("Red Ball Cap", "1H01");
-        productNames.put("Duke Mug", "1M02");
+        productNames.put("Duke Mug   ", "1M02");
 
         ProductCounter pc1 = new ProductCounter(productNames);
         pc1.processList(parts);
         pc1.printReport();
     }
 
-    public ProductCounter(Map<String, String> productNames) {
+    private ProductCounter(Map<String, String> productNames) {
         this.productNames = productNames;
     }
 
-    public void processList(String[] list) {
+    private void processList(String[] list) {
         long curVal = 0;
         for (String itemNumber : list) {
             if (productCountMap.containsKey(itemNumber)) {
@@ -45,7 +45,7 @@ public class ProductCounter {
         }
     }
 
-    public void printReport() {
+    private void printReport() {
         System.out.println("=== Produkt Report ===");
         for (String key : productNames.keySet()) {
             System.out.print("Name: " + key);
