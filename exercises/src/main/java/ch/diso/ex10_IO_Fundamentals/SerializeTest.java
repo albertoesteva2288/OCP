@@ -1,5 +1,8 @@
 package ch.diso.ex10_IO_Fundamentals;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.text.NumberFormat;
 
 public class SerializeTest {
@@ -17,6 +20,17 @@ public class SerializeTest {
                 + NumberFormat.getCurrencyInstance().format(cart.getCartTotal()));
 
         String directory = "/tmp/";
-        // Your code goes here....
+        String cartFile = directory + "cart" + cart.getCartID() + ".ser";
+
+        try (FileOutputStream fos = new FileOutputStream(cartFile);
+             ObjectOutputStream o = new ObjectOutputStream(fos)) {
+            o.writeObject(cart);
+        } catch (IOException e) {
+            System.out.println("Exception serializing " + cartFile + ": " + e);
+            System.exit(-1);
+        }
+
+        System.out.println("Successfully serialized shopping cart with ID: " + cart.getCartID());
+
     }
 }
