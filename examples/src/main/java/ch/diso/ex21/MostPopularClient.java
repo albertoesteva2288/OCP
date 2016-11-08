@@ -1,4 +1,4 @@
-package ch.diso.collector;
+package ch.diso.ex21;
 
 import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
