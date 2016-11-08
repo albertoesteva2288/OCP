@@ -1,6 +1,7 @@
 package ch.diso.ex21;
 
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -31,6 +32,28 @@ public class ConstructorReference {
             Apple apple = lambda.apply(110);
 
             // Apple{color='', weight=110}
+            System.out.println(apple);
+        }
+
+        /*
+         * Constructor with two arguments.
+         */
+        {
+            BiFunction<Integer, String, Apple> lambda = Apple::new;
+            Apple apple = lambda.apply(10, "red");
+
+            // Apple{color='red', weight=10}
+            System.out.println(apple);
+        }
+
+        /*
+         * Constructor with three arguments.
+         */
+        {
+            TriFunction<Integer, String, Boolean, Apple> lambda = Apple::new;
+            Apple apple = lambda.apply(10, "red", true);
+
+            // Apple{color='red', weight=10, bio=true}
             System.out.println(apple);
         }
 
