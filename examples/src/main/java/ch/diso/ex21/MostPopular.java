@@ -1,4 +1,4 @@
-package ch.diso.collector;
+package ch.diso.ex21;
 
 import java.util.*;
 import java.util.function.BiConsumer;
