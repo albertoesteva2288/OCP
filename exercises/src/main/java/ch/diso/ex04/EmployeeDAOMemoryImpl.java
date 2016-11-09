@@ -7,7 +7,7 @@ public class EmployeeDAOMemoryImpl implements EmployeeDAO {
 
     private static Employee[] employeeArray = new Employee[10];
 
-    EmployeeDAOMemoryImpl() {
+    public EmployeeDAOMemoryImpl() {
     }
 
     public void add(Employee emp) {
@@ -34,5 +34,10 @@ public class EmployeeDAOMemoryImpl implements EmployeeDAO {
             }
         }
         return emps.toArray(new Employee[0]);
+    }
+
+    @Override
+    public void close() throws Exception {
+        // Not yet used.
     }
 }

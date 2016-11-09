@@ -1,4 +1,4 @@
-package ch.diso.ex12_JDBC.dao;
+package ch.diso.ex12_JDBC;
 
 public class DAOException extends Exception {
 
