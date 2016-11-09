@@ -2,14 +2,14 @@ package ch.diso.ex04;
 
 public interface EmployeeDAO extends AutoCloseable {
 
-    void add(Employee emp);
+    void add(Employee emp) throws Exception;
 
-    void update(Employee emp);
+    void update(Employee emp) throws Exception;
 
-    void delete(int id);
+    void delete(int id) throws Exception;
 
-    Employee findById(int id);
+    Employee findById(int id) throws Exception;
 
-    Employee[] getAllEmployees();
+    Employee[] getAllEmployees() throws Exception;
 
 }

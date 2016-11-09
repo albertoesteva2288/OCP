@@ -1,12 +1,10 @@
-package ch.diso.ex12_JDBC.dao;
+package ch.diso.ex12_JDBC;
 
-import ch.diso.ex12_JDBC.model.Employee;
+import ch.diso.ex04.Employee;
+import ch.diso.ex04.EmployeeDAO;
+import ch.diso.ex12_JDBC.DAOException;
 
-import java.sql.Statement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class EmployeeDAOJDBCImpl implements EmployeeDAO {
@@ -137,7 +135,7 @@ public class EmployeeDAOJDBCImpl implements EmployeeDAO {
         try {
             con.close();
         } catch (SQLException se) {
-            System.out.println ("Exception closing Connection: " + se);
+            System.out.println("Exception closing Connection: " + se);
         }
     }
 }

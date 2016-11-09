@@ -12,16 +12,16 @@ public class EmployeeTest extends ch.diso.ex04.EmployeeTest {
 
         EmployeeDAOFactory factory = new EmployeeDAOFactory();
 
-        boolean timeToQuit;
+        boolean timeToQuit = false;
         try (EmployeeDAO dao = factory.createEmployeeDAO();
              BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
             do {
-                //try {
+                try {
                     timeToQuit = executeMenu(in, dao);
-//                } catch (DAOException e) {
-//                    System.out.println("Error " + e.getClass().getName());
-//                    System.out.println("Message: " + e.getMessage());
-//                }
+                } catch (DAOException e) {
+                    System.out.println("Error " + e.getClass().getName());
+                    System.out.println("Message: " + e.getMessage());
+                }
             } while (!timeToQuit);
         } catch (IOException e) {
             System.out.println("Error " + e.getClass().getName() + " , quiting.");

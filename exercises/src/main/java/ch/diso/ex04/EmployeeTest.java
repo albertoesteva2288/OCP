@@ -13,7 +13,7 @@ public class EmployeeTest {
     public static void main(String[] args) throws Exception {
         EmployeeDAOFactory factory = new EmployeeDAOFactory();
 
-        boolean timeToQuit = false;
+        boolean timeToQuit;
 
         EmployeeDAO dao = factory.createEmployeeDAO();
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -22,7 +22,7 @@ public class EmployeeTest {
         } while (!timeToQuit);
     }
 
-    protected static boolean executeMenu(BufferedReader in, EmployeeDAO dao) throws IOException {
+    protected static boolean executeMenu(BufferedReader in, EmployeeDAO dao) throws Exception {
         Employee emp;
         String action;
         int id;
