@@ -5,14 +5,14 @@ import ch.diso.ex12_JDBC.model.Employee;
 
 public interface EmployeeDAO extends AutoCloseable {
 
-    public void add(Employee emp) throws DAOException;
+    void add(Employee emp) throws DAOException;
 
-    public void update(Employee emp) throws DAOException;
+    void update(Employee emp) throws DAOException;
 
-    public void delete(int id) throws DAOException;
+    void delete(int id) throws DAOException;
 
-    public Employee findById(int id) throws DAOException;
+    Employee findById(int id) throws DAOException;
 
-    public Employee[] getAllEmployees() throws DAOException;
+    Employee[] getAllEmployees() throws DAOException;
 
 }
