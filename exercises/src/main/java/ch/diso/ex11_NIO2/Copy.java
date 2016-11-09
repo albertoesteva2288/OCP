@@ -10,18 +10,16 @@ import java.nio.file.Paths;
 public class Copy {
 
     public static void main(String[] args) {
-        boolean overwrite = false;
-        boolean prompt = false;
 
-        if (args.length < 2) {
-            error("Usage: java Copy <source directory> <target directory");
-        } else if (args[0].equals(args[1])) {
-            error("source and target cannot be the same directory");
-        }
+//        if (args.length < 2) {
+//            error("Usage: java Copy <source directory> <target directory");
+//        } else if (args[0].equals(args[1])) {
+//            error("source and target cannot be the same directory");
+//        }
 
         // Existieren die notwendigen Verzeichnisse
-        Path source = Paths.get(args[0]);
-        Path target = Paths.get(args[1]);
+        Path source = Paths.get("/tmp/source"); // Paths.get(args[0]);
+        Path target = Paths.get("/tmp/target"); // Paths.get(args[1]);
 
         if (Files.notExists(source)) {
             error("The source must exist: " + source);
