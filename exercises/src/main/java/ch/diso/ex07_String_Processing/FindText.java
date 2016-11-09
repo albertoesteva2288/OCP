@@ -18,17 +18,14 @@ public class FindText {
         // Create Matcher
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            String line = "";
-            int c = 1;
+            String line;
             while ((line = reader.readLine()) != null) {
                 // Generate a matcher based on Pattern
                 // Search for text
                 // Print results
-                c++;
             }
-
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("File not found!");
         }
     }
 }
