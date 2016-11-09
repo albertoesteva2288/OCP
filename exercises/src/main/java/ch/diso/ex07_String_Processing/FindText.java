@@ -18,6 +18,12 @@ public class FindText {
     private void run() {
         String fileName = "gettys.html";
 
+        /* Tips and Tricks
+         * IntelliJ IDEA provides intention actions to check validity of the regular expressions,
+         * and edit regular expressions in a scratchpad.
+         *
+         * https://www.jetbrains.com/help/idea/2016.2/regular-expression-syntax-reference.html
+         */
         Pattern pattern = Pattern.compile("<h4>");
         Matcher matcher;
 
