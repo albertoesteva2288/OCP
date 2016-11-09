@@ -22,7 +22,7 @@ public class EmployeeTest {
         } while (!timeToQuit);
     }
 
-    public static boolean executeMenu(BufferedReader in, EmployeeDAO dao) throws IOException {
+    protected static boolean executeMenu(BufferedReader in, EmployeeDAO dao) throws IOException {
         Employee emp;
         String action;
         int id;
@@ -97,15 +97,15 @@ public class EmployeeTest {
         return false;
     }
 
-    public static Employee inputEmployee(BufferedReader in) throws IOException {
+    private static Employee inputEmployee(BufferedReader in) throws IOException {
         return inputEmployee(in, null, true);
     }
 
-    public static Employee inputEmployee(BufferedReader in, Employee empDefaults) throws IOException {
+    private static Employee inputEmployee(BufferedReader in, Employee empDefaults) throws IOException {
         return inputEmployee(in, empDefaults, false);
     }
 
-    public static Employee inputEmployee(BufferedReader in, Employee empDefaults, boolean newEmployee) throws IOException {
+    private static Employee inputEmployee(BufferedReader in, Employee empDefaults, boolean newEmployee) throws IOException {
         SimpleDateFormat df = new SimpleDateFormat("MMM d, yyyy");
         NumberFormat nf = NumberFormat.getCurrencyInstance();
         int id = -1;
