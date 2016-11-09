@@ -16,12 +16,7 @@ public class EmployeeTest extends ch.diso.ex04.EmployeeTest {
         try (EmployeeDAO dao = factory.createEmployeeDAO();
              BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
             do {
-                //try {
-                    timeToQuit = executeMenu(in, dao);
-//                } catch (DAOException e) {
-//                    System.out.println("Error " + e.getClass().getName());
-//                    System.out.println("Message: " + e.getMessage());
-//                }
+                timeToQuit = executeMenu(in, dao);
             } while (!timeToQuit);
         } catch (IOException e) {
             System.out.println("Error " + e.getClass().getName() + " , quiting.");
