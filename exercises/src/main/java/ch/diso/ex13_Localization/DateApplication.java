@@ -1,4 +1,4 @@
-package ch.diso.ex13_Localozation;
+package ch.diso.ex13_Localization;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
