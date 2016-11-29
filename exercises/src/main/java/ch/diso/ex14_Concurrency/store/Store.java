@@ -11,21 +11,21 @@ public class Store {
     private Store() {
     }
 
-    public static Store getInstance() {
+    static Store getInstance() {
         return instance;
     }
 
-    public void addShirt(Shirt shirt) {
+    void addShirt(Shirt shirt) {
         System.out.println("Adding a shirt to the store.");
         shirts.push(shirt);
         System.out.println("Total shirts in stock: " + shirts.size());
     }
 
-    public Shirt takeShirt() {
+    Shirt takeShirt() {
         return shirts.pop();
     }
 
-    public int getShirtCount() {
+    int getShirtCount() {
         return shirts.size();
     }
 
@@ -34,7 +34,7 @@ public class Store {
      * überprüfen. Da dies eine Weile dauern kann werden wir hier
      * eine kleine Verzögerung einbauen.
      */
-    public boolean authorizeCreditCard(String accountNumber, double amount) {
+    boolean authorizeCreditCard(String accountNumber, double amount) {
         int seconds = (int) (Math.random() * 3 + 1);
         System.out.println("Sleeping for " + seconds + " seconds");
         try {

@@ -1,12 +1,12 @@
 package ch.diso.ex14_Concurrency.store;
 
-public class PurchasingAgent {
+class PurchasingAgent {
 
-    public PurchasingAgent() {
+    PurchasingAgent() {
         System.out.println("Creating a purchasing agent");
     }
 
-    public void purchase() {
+    void purchase() {
         Thread t = Thread.currentThread();
         System.out.println("Thread:" + t.getName() + "," + t.getId());
         Store store = Store.getInstance();

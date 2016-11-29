@@ -7,7 +7,7 @@ public class Shirt {
     private String color = "";
     private String size = "";
 
-    public Shirt(String id, String description, String color, String size) {
+    Shirt(String id, String description, String color, String size) {
         this.id = id;
         this.description = description;
         this.color = color;
@@ -32,17 +32,11 @@ public class Shirt {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Shirt ID: ")
-                .append(getId())
-                .append("\nDescription: ")
-                .append(getDescription())
-                .append("\nColor: ")
-                .append(getColor())
-                .append("\nSize: ")
-                .append(this.getSize())
-                .append("\n");
-
-        return sb.toString();
+        return "Shirt{" +
+                "id='" + id + '\'' +
+                ", description='" + description + '\'' +
+                ", color='" + color + '\'' +
+                ", size='" + size + '\'' +
+                '}';
     }
 }
