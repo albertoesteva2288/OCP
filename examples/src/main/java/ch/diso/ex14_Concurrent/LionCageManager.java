@@ -29,7 +29,7 @@ public class LionCageManager {
     public static void main(String[] args) {
         ExecutorService service = null;
         try {
-            service = Executors.newFixedThreadPool(COUNT);
+            service = Executors.newFixedThreadPool(3);
             LionCageManager manager = new LionCageManager();
             for (int i = 0; i < COUNT; i++)
                 service.submit(() -> manager.performTask());
